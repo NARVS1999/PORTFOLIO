@@ -1,0 +1,80 @@
+* {
+    /* border: 1px dotted red; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-background: #eaedf0;
+    --card-background: #f6f7f8;
+    --font-color: #5d6063;
+    --border-color: #D6D9DC;
+}
+
+body {
+    background-color: var(--main-background);
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: var(--font-color);
+    line-height: 1.3;
+}
+
+/* profile card */
+.profile-container {
+    width: 90%;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    background-color: var(--card-background);
+    
+    margin: 20px auto 0;
+    padding: 5% 0;
+}
+
+/* profile image */
+.profile-picture img {
+    width: 100%;
+
+    border-radius: 5px;
+    box-shadow: 0 0 3px 3px var(--border-color);
+
+}
+
+.profile-picture, 
+.profile-introduction,
+.profile-intro {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* profile name */
+.name .fullname {
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.profile-introduction .profile-name {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* contact icon */
+.contact p .contact-icon {
+    width: 20px;
+    margin-bottom: -5px;
+    margin-right: 5px;
+}
+
+/* profile introduction */
+.profile-intro {
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
