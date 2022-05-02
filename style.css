@@ -10,6 +10,7 @@
     --card-background: #f6f7f8;
     --font-color: #5d6063;
     --border-color: #D6D9DC;
+    --heading-color: #191919;
 }
 
 body {
@@ -20,8 +21,10 @@ body {
     line-height: 1.6;
 }
 
-/* profile container */
-.profile-container {
+/* profile container, technologies i offer today/soon container */
+.profile-container,
+.today-offer-container,
+.soon-offer-container {
     width: 90%;
     height: fit-content;
 
@@ -66,6 +69,11 @@ body {
 .profile-name .fullname {
     font-size: 18px;
     font-weight: 900;
+    color: var(--heading-color);
+}
+
+.profile-name .position {
+    color: var(--heading-color);
 }
 
 /* contact detailed icon style and size */
@@ -87,5 +95,43 @@ body {
 .profile-container .profile-intro-container {
     margin: 0;
     text-align: justify;
+}
+
+/* i offer today and soon container */
+.today-offer-container,
+.soon-offer-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    justify-items: center;
+}
+
+/* images on container about technology I offer today and soon */
+.today-offer-container img,
+.soon-offer-container img {
+    width: 50px;
+
+    transition: all .5s;
+}
+
+.today-offer-container img:hover,
+.soon-offer-container img:hover {
+    transform: scale(1.5) rotate(360deg);
+    
+}
+
+/* heading title about technology I offer today */
+.today-offer-container .title-heading,
+.soon-offer-container .title-heading {
+    grid-column: 1 / span 3;
+    text-transform: uppercase;
+    font-weight: 900;
+    text-align: center;
+    color: var(--heading-color);
+}
+
+.mongoose,
+.firebase {
+    height: 50px;
 }
 
