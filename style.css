@@ -11,6 +11,7 @@
     --font-color: #5d6063;
     --border-color: #D6D9DC;
     --heading-color: #191919;
+    --button-primary-color: #039be5;
 }
 
 body {
@@ -21,10 +22,14 @@ body {
     line-height: 1.6;
 }
 
-/* profile container, technologies i offer today/soon container */
+/* profile container, technologies i offer today/soon container, about me container, educational background container, project heading, project container style */
 .profile-container,
 .today-offer-container,
-.soon-offer-container {
+.soon-offer-container,
+.about-me,
+.educational-background,
+.project-heading,
+.project-container {
     width: 90%;
     height: fit-content;
 
@@ -73,7 +78,8 @@ body {
 }
 
 .profile-name .position {
-    color: var(--heading-color);
+    color: var(--font-color);
+    font-weight: 700;
 }
 
 /* contact detailed icon style and size */
@@ -89,12 +95,19 @@ body {
 /* contact text font size */
 .contact-container .contact p {
     font-size: 12px;
+    font-weight: 400;
+    font-size: 12px;
+
+    color: var(--font-color);
 }
 
 /* introduction margin */
-.profile-container .profile-intro-container {
+.profile-container .profile-introduction-container {
     margin: 0;
-    text-align: justify;
+    font-weight: 400;
+    font-size: 12px;
+
+    color: var(--font-color);
 }
 
 /* i offer today and soon container */
@@ -120,9 +133,12 @@ body {
     
 }
 
-/* heading title about technology I offer today */
+/* heading title about technology I offer today/soon, about me, educational background */
 .today-offer-container .title-heading,
-.soon-offer-container .title-heading {
+.soon-offer-container .title-heading,
+.about-me .title-heading,
+.educational-background .title-heading,
+.project-heading {
     grid-column: 1 / span 3;
     text-transform: uppercase;
     font-weight: 900;
@@ -130,8 +146,108 @@ body {
     color: var(--heading-color);
 }
 
+.about-me .title-heading,
+.educational-background .title-heading,
+.project-heading {
+    text-align: left;
+}
+
 .mongoose,
 .firebase {
     height: 50px;
 }
 
+/* sub-container of educational background style */
+.educational-background .sub-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.sub-container .educational-bg-details {
+    grid-column: 2 / span 2;
+}
+
+.educational-bg-details .course {
+    font-weight: 700;
+}
+
+.sub-container img {
+    width: 75px;
+    grid-column: 1 / span 1;
+    align-self: center;
+    justify-self: center;
+}
+
+/* project container display type */
+.project-container {
+    display: grid;
+    gap: 20px;
+}
+
+.project-image-container .project-image {
+    width: 100%;
+    height: auto;
+
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    display: block;
+
+    padding: 10px;
+}
+
+/* project title style */
+.profile-container, .title-heading {
+    font-weight: 900;
+    color: var(--heading-color);
+    text-transform: uppercase;
+}
+
+/* project buttons style */
+.project-buttons {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    gap: 10px 20px;
+}
+
+.project-buttons .project-wireframe {
+    grid-area: 1 / 1 / span 1 / span 1;
+    text-align: center;
+    background-color: var(--button-primary-color);
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    color: #ffffff;
+    font-weight: bold;
+
+    transition: all .3s;
+}
+
+.project-buttons .project-demo {
+    grid-area: 2 / 1 / span 1 / span 1;
+    text-align: center;
+    background-color: var(--button-primary-color);
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    color: #ffffff;
+    font-weight: bold;    
+
+    transition: all .3s;
+}
+
+.project-buttons .project-code {
+    grid-area: 2 / 2 / span 1 / span 1;
+    text-align: center;
+    background-color: #ffffff;
+    border: 2px solid var(--button-primary-color);
+    border-radius: 10px;
+    color: var(--button-primary-color);
+    font-weight: bold;
+
+    transition: all .3s;
+}
+
+.project-wireframe:hover, 
+.project-demo:hover,
+.project-code:hover {
+    transform: scale(1.1);
+}
