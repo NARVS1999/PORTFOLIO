@@ -38,7 +38,7 @@
         *mobile
         *tablet
         *laptop/desktop
-    2. Build a porfolio website that have a dark mode feature
+    2. Build a portfolio website that have a dark mode feature
 
 ## Features/Scope:
     1. responsive website
