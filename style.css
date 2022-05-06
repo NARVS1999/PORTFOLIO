@@ -16,7 +16,7 @@
     --main-background-dark: #1e1e1e; 
     --card-background-dark: #323232;
     --font-color-dark: #fcfffe;
-    --border-color-dark: #ffb902;
+    --border-color-dark: #6ab4f5;
     --heading-color-dark: #ffffff;
 }
 
@@ -57,7 +57,7 @@
     border: 3px solid var(--border-color);
     border-radius: 20px;
 
-    padding: 10px;
+    padding: 20px;
     margin: 20px auto;
 
     transition: all .5s;
@@ -85,7 +85,7 @@
     border-color: var(--border-color-dark);
     border-radius: 20px;
 
-    padding: 10px;
+    padding: 20px;
     margin: 20px auto;
 
     transition: all .5s;
@@ -262,8 +262,8 @@
     height: auto;
 
     border-radius: 10px;
-    border: 2px solid var(--border-color);
-    box-shadow: 0px 2px 5px var(--border-color);
+    border: .5px solid var(--border-color);
+    /* box-shadow: 0px 2px 3px var(--border-color); */
     display: block;
 
     /* padding: 10px; */
@@ -273,7 +273,7 @@
 .project-image-container .project-image-2-dark,
 .project-image-container .project-image-3-dark {
     border-color: var(--border-color-dark);
-    box-shadow: 0px 2px 3px var(--border-color-dark);
+    /* box-shadow: 0px 2px 3px var(--border-color-dark); */
 }
 
 /* project title style */
@@ -400,7 +400,8 @@
    .main-project-container {
        display: grid;
        grid-template-columns: repeat(2, 1fr);
-       gap: 20px;
+       row-gap: 20px;
+       column-gap: 30px;
 
        width: 95%;
        height: fit-content;
